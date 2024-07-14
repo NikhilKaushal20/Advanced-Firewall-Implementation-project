@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Lists</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Whitelisted Entries</h2>
+        <ul>
+            {% for entry in whitelist %}
+                <li>{{ entry }}</li>
+            {% endfor %}
+        </ul>
+
+        <h2>Blacklisted Entries</h2>
+        <ul>
+            {% for entry in blacklist %}
+                <li>{{ entry }}</li>
+            {% endfor %}
+        </ul>
+
+        <h2>Move Entries Between Lists</h2>
+        <form action="/display_lists" method="post">
+            <label for="ip">IP Address:</label>
+            <input type="text" id="ip" name="ip" required><br>
+            <label for="port">Port:</label>
+            <input type="text" id="port" name="port" required><br>
+            <label for="protocol">Protocol:</label>
+            <input type="text" id="protocol" name="protocol" required><br>
+            <input type="radio" id="move_to_whitelist" name="list_type" value="move_to_whitelist" required>
+            <label for="move_to_whitelist">Move to Whitelist</label><br>
+            <input type="radio" id="move_to_blacklist" name="list_type" value="move_to_blacklist" required>
+            <label for="move_to_blacklist">Move to Blacklist</label><br>
+            <button type="submit">Move Entry</button>
+        </form>
+
+        {% if message %}
+            <p>{{ message }}</p>
+        {% endif %}
+
+        <a href="{{ url_for('home') }}"><button>Back to Home</button></a>
+    </div>
+</body>
+</html>

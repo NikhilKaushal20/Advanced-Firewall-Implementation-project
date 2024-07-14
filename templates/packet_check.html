@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Packet</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Check Packet</h2>
+        <form action="/check_packet" method="post">
+            <label for="ip">IP Address:</label>
+            <input type="text" id="ip" name="ip" required><br>
+            <label for="port">Port:</label>
+            <input type="text" id="port" name="port" required><br>
+            <label for="protocol">Protocol:</label>
+            <input type="text" id="protocol" name="protocol" required><br>
+            <button type="submit">Check Packet</button>
+        </form>
+        {% if result %}
+            <p>Result: {{ result }}</p>
+        {% endif %}
+        <a href="{{ url_for('home') }}"><button>Back to Home</button></a>
+    </div>
+</body>
+</html>
