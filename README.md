@@ -86,3 +86,22 @@ Step 6: Create the Strategy Factory (Factory Pattern)
 Step 7: Combine Everything in the Main File
 •	Purpose: Use the strategies for filtering network traffic.
 •	File: main.py
+
+![image](https://github.com/user-attachments/assets/59cebe14-f472-43ec-95b6-c0bd3269491e)
+
+WORKING:
+1.	Firstly run the app.py file
+![image](https://github.com/user-attachments/assets/4e3a397e-ce74-4060-90b0-d3353bef4d00)
+
+Step 2 click on Running on http://127.0.0.1:5000
+![image](https://github.com/user-attachments/assets/16ba8ed4-3fe2-4039-ae08-31ac2f9d20ed)
+
+Step 3 Login: username – admin password- password (you can do following things mentioned there)
+![image](https://github.com/user-attachments/assets/54a5c275-70f9-4e30-8a81-0b20d921c970)
+
+Step 4: after setting rules and IP’s we will check for the packets:
+![image](https://github.com/user-attachments/assets/26af786c-32f3-4ddb-a5ce-28743d5a743c)
+
+
+
+
