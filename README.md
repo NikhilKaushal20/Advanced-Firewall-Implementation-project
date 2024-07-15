@@ -15,10 +15,12 @@ OBJECTIVES:
 1.	Design Patterns
 •	Strategy, Factory, and Singleton Patterns: 
 Implemented for efficient rule handling and scalability.
-2.	Network Traffic Filtering
+
+3.	Network Traffic Filtering
 •	IP Addresses, Ports, and Protocols: 
 Implements strategies for filtering traffic based on these parameters.
-3.	User Interface
+
+5.	User Interface
 •	Rule Management Interface:
 Provides a user-friendly web interface for setting rules and monitoring network traffic.
 
@@ -38,8 +40,10 @@ Logging In:
 1.	Use the default admin credentials:
 o	Username: admin
 o	Password: password
+
 Navigating the Application:
-2.	Use the home page to manage rules, display lists, and check packets.
+3.	Use the home page to manage rules, display lists, and check packets.
+
 •	Firewall/: Contains core application files.
 o	__init__.py: Initialization file.
 o	strategy_factory.py: Implements strategy and factory patterns.
@@ -52,25 +56,33 @@ o	home.html, set_rules.html, display_lists.html, check_packet.html: Specific pag
 o	style.css: CSS stylesheets.
 •	app.py: Entry point for running the Flask application.
 •	requirements.txt: Lists all dependencies required for the project.
+
 STEPS TO COMPLETE PROJECT:
+
 Step 1: Set Up Configuration Settings (Singleton Pattern)
 •	Purpose: Ensure only one instance of the settings exists.
 •	File: config/settings.py
+
 Step 2: Define the Base Strategy (Strategy Pattern)
 •	Purpose: Create an abstract base class for filtering network traffic.
 •	File: firewall/base_strategy.py
+
 Step 3: Implement IP Filter Strategy
 •	Purpose: Filter network traffic based on IP addresses.
 •	File: firewall/ip_filter.py
+
 Step 4: Implement Port Filter Strategy
 •	Purpose: Filter network traffic based on ports.
 •	File: firewall/port_filter.py
+
 Step 5: Implement Protocol Filter Strategy
 •	Purpose: Filter network traffic based on protocols.
 •	File: firewall/protocol_filter.py
+
 Step 6: Create the Strategy Factory (Factory Pattern)
 •	Purpose: Create instances of different firewall strategies.
 •	File: firewall/strategy_factory.py
+
 Step 7: Combine Everything in the Main File
 •	Purpose: Use the strategies for filtering network traffic.
 •	File: main.py
